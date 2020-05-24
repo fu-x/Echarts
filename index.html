@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/index.css">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 头部 -->
+  <header>
+    <h1>Echarts——数据可视化</h1>
+    <div class="showTime">
+      当前时间：2020-05-21 23:48:36
+    </div>
+  </header>
+  <!-- 主体部分 -->
+  <main>
+    <section class="left">
+      <div class="panel bar">
+        <h2>柱状图-就业行业</h2>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+      <div class="panel line">
+        <h2>折线图-人员变化</h2>
+        <div class="selectYear">
+          <label>
+            <input type="radio" name="year" value="2020" checked>2020
+          </label>
+          <label>
+            <input type="radio" name="year" value="2021">2021
+          </label>
+        </div>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+      <div class="panel">
+        <h2>柱状图-就业行业</h2>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </section>
+    <section class="middle">
+      <div class="no">
+        <div class="no-hd">
+          <div class="no-hc">189454</div>
+          <div class="no-hc">1544897</div>
+        </div>
+        <div class="no-bd">
+          <div class="no-bc">189454</div>
+          <div class="no-bc">1544897</div>
+        </div>
+      </div>
+      <div class="map">
+        <div class="map1"></div>
+        <div class="map2"></div>
+        <div class="map3"></div>
+        <div class="chart"></div>
+      </div>
+    </section>
+    <section class="right">
+      <div class="panel bar2">
+        <h2>柱状图-技能掌握</h2>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+      <div class="panel line2">
+        <h2>柱状图-就业行业</h2>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+      <div class="panel">
+        <h2>柱状图-就业行业</h2>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </section>
+  </main>
+  <script src="./js/flexible.js"></script>
+  <script src="./js/echarts.min.js"></script>
+  <script src="./js/index.js"></script>
+  <script>
+    // 设置时间
+    let timeBox = document.getElementsByClassName('showTime')[0];
+    function setTime(timeBox){
+      const time = new Date();
+      const year = time.getFullYear();
+      const month = time.getMonth() + 1;
+      const day = time.getDate();
+      const hour = time.getHours();
+      const minute = time.getMinutes();
+      const second = time.getSeconds();
+      timeBox.innerHTML = `当前事件：${year}年${month}月${day}日 ${hour}时${minute}分${second}秒`;
+    }
+    setTime(timeBox);
+    setInterval(() => {
+      setTime(timeBox);
+    }, 1000);
+  </script>
+</body>
+</html>
