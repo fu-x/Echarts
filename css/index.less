@@ -114,23 +114,23 @@ body {
         .map1 {
           width: 6.475rem;
           height: 6.475rem;
-          background: url('../image/map.png') center;
-          background-size: 100% 100%;
-          opacity: .3;
+          background: url('../image/map.png') center no-repeat;
+          background-size: 80% 80%;
+          opacity: .5;
         }
         .map2 {
           width: 7.65rem;
           height: 7.65rem;
-          background: url('../image/lbx.png') center;
-          background-size: 100% 100%;
-          opacity: .6;
+          background: url('../image/lbx.png') center no-repeat;
+          background-size: 80% 80%;
+          opacity: .5;
           animation: rotate1 10s linear infinite;
         }
         .map3 {
           width: 7.075rem;
           height: 7.075rem;
-          background: url('../image/jt.png') center;
-          background-size: 100% 100%;
+          background: url('../image/jt.png') center no-repeat;
+          background-size: 80% 80%;
           opacity: .6;
           animation: rotate2 10s linear infinite;
         }
@@ -140,8 +140,6 @@ body {
           position: absolute;
           top: 0;
           left: 0;
-          background-color: yellow;
-          opacity: .1;
         }
         @keyframes rotate1 {
           form {
@@ -236,5 +234,16 @@ body {
     .chart {
       height: 3rem;
     }
+  }
+}
+/* 约束屏幕尺寸 */
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 42px !important;
+  }
+}
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 80px !important;
   }
 }

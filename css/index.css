@@ -119,23 +119,23 @@ body main .middle .map .map3 {
 body main .middle .map .map1 {
   width: 6.475rem;
   height: 6.475rem;
-  background: url('../image/map.png') center;
-  background-size: 100% 100%;
-  opacity: 0.3;
+  background: url('../image/map.png') center no-repeat;
+  background-size: 80% 80%;
+  opacity: 0.5;
 }
 body main .middle .map .map2 {
   width: 7.65rem;
   height: 7.65rem;
-  background: url('../image/lbx.png') center;
-  background-size: 100% 100%;
-  opacity: 0.6;
+  background: url('../image/lbx.png') center no-repeat;
+  background-size: 80% 80%;
+  opacity: 0.5;
   animation: rotate1 10s linear infinite;
 }
 body main .middle .map .map3 {
   width: 7.075rem;
   height: 7.075rem;
-  background: url('../image/jt.png') center;
-  background-size: 100% 100%;
+  background: url('../image/jt.png') center no-repeat;
+  background-size: 80% 80%;
   opacity: 0.6;
   animation: rotate2 10s linear infinite;
 }
@@ -145,8 +145,6 @@ body main .middle .map .chart {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: yellow;
-  opacity: 0.1;
 }
 @keyframes rotate1 {
   form {
@@ -232,4 +230,15 @@ body .panel .selectYear label {
 }
 body .panel .chart {
   height: 3rem;
+}
+/* 约束屏幕尺寸 */
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 42px !important;
+  }
+}
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 80px !important;
+  }
 }
